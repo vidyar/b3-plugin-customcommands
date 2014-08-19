@@ -16,3 +16,6 @@ install:
 
 # command to run tests, e.g. python setup.py test
 script: PYTHONPATH=extplugins nosetests --where=tests
+
+notifications:
+  email: false
