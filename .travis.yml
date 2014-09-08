@@ -5,8 +5,10 @@ python:
   - 2.7
 
 env:
+ global:
   - B3_REPO='git+git://github.com/BigBrotherBot/big-brother-bot.git@master#egg=b3'
   - B3_REPO='git+git://github.com/BigBrotherBot/big-brother-bot.git@release-1.10#egg=b3'
+  - secure: fJdo6pI0KEBoHgkLjxwKB98+7vVenrLSXiKdGIfxGW3TWGGfjpcTf4DFOrQKRrZj9Mhb+ESxeCB68/j2JPzVKU0o1heC249q2dAMwC6qIqotiGwv3ZGLtsI31eGA1FnrGNOql6KhccG4HFArDlf7sZMX/iSXY4vTQpRHztN+idVHjb+Fp3zGvZ9mi6ikug1lnUXRe9zjk7o7xJbkCQwSizSjLOXBc1TDWr2rUMOdnwIIIkw+5TGPWNZnKY6f/IcHL0/+R4P9EUSnnksksbi+r4DAbc0Xeh8hz12SCiV1590nKjwvaSQH5oymF7g/qrpNgU4l9mXbxOlNezWcoRkU1A==
 
 # command to install dependencies, e.g. pip install -r requirements.txt
 install:
@@ -14,8 +16,9 @@ install:
   - pip install -e ${B3_REPO}
 
 # command to run tests, e.g. python setup.py test
-script: PYTHONPATH=extplugins nosetests --where=tests
-
+script: 
+  - PYTHONPATH=extplugins nosetests --where=tests
+  - echo $Foo 
 archive: true
 notifications:
   email: vidyac.raghav@gmail.com
