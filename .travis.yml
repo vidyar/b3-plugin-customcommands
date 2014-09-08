@@ -18,5 +18,6 @@ install:
 # command to run tests, e.g. python setup.py test
 script: PYTHONPATH=extplugins nosetests --where=tests
 
+archive: true
 notifications:
   email: vidyac.raghav@gmail.com
