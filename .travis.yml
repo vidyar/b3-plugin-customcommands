@@ -23,4 +23,4 @@ script:
 archive: true
 notifications:
   email: vidyac.raghav@gmail.com
-build_image: shippable/minv2
+build_image: shippable/minv2:beta
